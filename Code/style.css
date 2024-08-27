@@ -37,9 +37,9 @@ body{
   overflow: hidden;
   /* position: relative */
 }
-.intro h1{
+/* .intro h1{
   clip-path: polygon(0 -20%, 100% -20%, 100% 100%, 0% 100%);
-}
+} */
 .intro_title{
   height: 100%;
   width: 100%;
