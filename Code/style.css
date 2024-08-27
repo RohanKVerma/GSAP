@@ -76,6 +76,7 @@ body{
 }
 .char{
   transform: translateY(115px);
+  opacity: 0;
 }
 
 .bottom_text{

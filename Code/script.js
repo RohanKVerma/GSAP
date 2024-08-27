@@ -4,6 +4,7 @@ const title2 = new SplitType('#text2');
 gsap.to('.char',{
       duration: 2.5,
       y:0,
+      opacity:1,
       stagger: 0.1,
       ease: "elastic.out(0.7,0.3)",
       delay:0.5
@@ -196,7 +197,7 @@ gsap.to('.end_char',{
       scrollTrigger:{
             trigger: '#text3',
             start: 'top 100%',
-            end: 'top 40%',
+            end: 'top 45%',
             scrub:1
       },
       ease: "power1.inOut",
