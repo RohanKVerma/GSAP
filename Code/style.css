@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
-
+/* Global styling */
 html{
   scroll-behavior: smooth;
   line-height: 1.15;
@@ -29,17 +29,37 @@ body{
     mix-blend-mode:exclusion;
   }
 }
+.heading{
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.rotating_box{
+  position: absolute;
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  border: 1px solid white;
+}
+.outline_text{
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  text-transform: uppercase;
+}
+.char{
+  transform: translateY(115px);
+  opacity: 0;
+}
 .intro{
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /* position: relative */
 }
-/* .intro h1{
-  clip-path: polygon(0 -20%, 100% -20%, 100% 100%, 0% 100%);
-} */
 .intro_title{
   height: 100%;
   width: 100%;
@@ -49,36 +69,18 @@ body{
   align-items: center;
   position: absolute;
 }
-.outline_text{
-  position: relative;
-  color: transparent;
-  -webkit-text-stroke: 1px white;
-  text-transform: uppercase;
-}
 .intro_img{
   height: 100%;
   width: 100vw;
-  /* background-color: aliceblue; */
   object-fit: cover;
-  /* transform: translateX(400px); */
-  /* overflow: hidden; */
   position: relative;
   z-index: -1;
 }
 .intro_img img{
   height: 100%;
   width: 43vw;
-  /* scale: 1.3; */
   transform: translateX(600px);
-  /* vertical-align: middle; */
-  
-  /* scale: 1.2; */
 }
-.char{
-  transform: translateY(115px);
-  opacity: 0;
-}
-
 .bottom_text{
   background-color: #171717;
   color: #9E9E9E;
@@ -86,7 +88,6 @@ body{
   height: 8vh;
   font-size: 32px;
   font-weight: 800;
-  font-family: 'Syne', sans-serif;
   position: absolute;
   top: 93%;
   display: flex;
@@ -96,11 +97,9 @@ body{
 .bottom_text-wrap{
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
   align-items: center;
   text-transform: uppercase;
   white-space: nowrap;
-  /* overflow: hidden; */
   transform: translateX(-500px);
 }
 .txt{
@@ -136,31 +135,14 @@ transform: translateY(350px);
   transform: translate(100px, 150px);
   width: 500px;
 }
-.heading{
-  font-size: 3rem;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
-}
-.rotating_box{
-  position: absolute;
-  z-index: 1;
-  height: 100px;
-  width: 100px;
-  /* transform: translate(300px, -100px); */
-  background: transparent;
-  border: 1px solid white;
-}
 #about_rotating_box{
   transform: translate(300px, -100px);
-}
-#benefits_rotating_box{
-  transform: translate(50px, -300px);
 }
 .about_body{
   font-weight: 800;
   color: #4B4B4B;
 }
+/* styling for benefits section*/
 .benefits{
   height: 100vh;
   width: 100vw;
@@ -170,6 +152,9 @@ transform: translateY(350px);
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+#benefits_rotating_box{
+  transform: translate(50px, -300px);
 }
 .benefits_grid{
   display: grid;
@@ -182,13 +167,10 @@ transform: translateY(350px);
   transform: translateX(100px);
 }
 .benefit_body{
-  /* font-size: 32px; */
   color: #4B4B4B;
 }
-
+/* styling for portfolio section*/
 .portfolio{
-  /* margin-bottom: 30vh; */
-  /* background-color: #9E9E9E; */
   padding-top: 800px;
   height: 100vh;
   width: 100vw;
@@ -206,9 +188,6 @@ transform: translateY(350px);
   grid-template-columns: 1fr 1fr;
   gap:110px;
 }
-/* .portfolio_grid:nth-child(2n){
-  transform: translateY(1000px);
-} */
 .portfolio_head{
   z-index: 1;
   position: absolute;
@@ -225,23 +204,20 @@ transform: translateY(350px);
   justify-content: center;
   align-items: center;
   background-color: aliceblue;
-  /* object-fit:fit; */
 }
 .portfolio_item img{
   scale: 1.3;
-  /* transform: translateY(-10px); */
   vertical-align: middle;
   height: 100%;
   width: 100%;
 }
-
+/* styling for services section */
 .services{
   margin-top: 150vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: #9E9E9E; */
 }
 #services_rotating_box{
   transform: translateX(250px);
@@ -271,6 +247,7 @@ transform: translateY(350px);
   width: 82px;
   z-index: 1;
 }
+/* individual styling for each arrow to start from particular position */
 #arrow1{
   transform: translate3d(-380px, -10px, 0);
 }
@@ -283,7 +260,7 @@ transform: translateY(350px);
 #arrow4{
   transform: translate3d(-470px, -10px, 0);
 }
-
+/* styling for ending section */
 .ending{
   height: 100vh;
   width: 100vw;
@@ -298,7 +275,7 @@ transform: translateY(350px);
 .ending .char{
   transform: translateY(0px);
 }
-
+/* Style for each character */
 #char0{
   transform: translateY(-50px);
   opacity: 0;

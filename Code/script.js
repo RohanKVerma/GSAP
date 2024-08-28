@@ -24,19 +24,6 @@ gsap.from('.bottom_text',{
       duration: 1,
       y:100
 })
-// gsap.to('.bottom_text',{
-//       delay:10,
-//       duration: 2.5,
-//       y:0
-// })
-// gsap.registerPlugin(ScrollSmoother);
-// let smoother = ScrollSmoother.create({
-//       wrapper: 'body',
-//       content: 'body',
-//       smooth:3,
-//       smoothTouch:0.1
-// })
-
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('.bottom_text-wrap',{
       scrollTrigger: {
@@ -121,7 +108,6 @@ gsap.from('.portfolio_head',{
       scrollTrigger:{
             trigger:'.portfolio_grid',
             start: 'top bottom',
-            // end: 'top -100%',
             scrub: 1
       },
       ease: "ease.in(1.7)",
@@ -174,8 +160,6 @@ gsap.to('#services_rotating_box',{
 gsap.to('.service_arrow',{
       scrollTrigger: {
             trigger: '.services_list',
-            // start: 'top 70%',
-            // end: 'top -100%',
             start: 'top bottom',
             scrub: 1
       },
@@ -184,10 +168,8 @@ gsap.to('.service_arrow',{
 
 const text3 = new SplitType('#text3', {
 	types: 'chars',
-      absolute:true
 });
 let array = text3.chars;
-// console.log(array);
 for (let i = 0; i < array.length; i++) {
       const char = array[i];
       char.classList.add('end_char');
