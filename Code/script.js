@@ -173,7 +173,8 @@ let array = text3.chars;
 for (let i = 0; i < array.length; i++) {
       const char = array[i];
       char.classList.add('end_char');
-      char.setAttribute('id','char'+i);
+      char.classList.add('char'+i);
+      // char.setAttribute('id','char'+i);
 }
 gsap.to('.end_char',{
       scrollTrigger:{
