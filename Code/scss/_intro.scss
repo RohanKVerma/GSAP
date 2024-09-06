@@ -1,0 +1,29 @@
+@import 'variable';
+@import 'mixin';
+
+.intro {
+@include fullscreen;
+@include flex-center;
+overflow: hidden;
+      &_title {
+      height: 100%;
+      width: 100%;
+      @include flex-center;
+      position: absolute;
+      }
+      &_img {
+      height: 100%;
+      width: 100vw;
+      object-fit: cover;
+      z-index: -1;
+            img {
+                  height: 100%;
+                  width: 43vw;
+                  transform: translateX(600px);
+            }
+      }
+}
+    
+
+
+        

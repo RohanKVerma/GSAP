@@ -1,0 +1,47 @@
+@import 'variable';
+@import 'mixin';
+
+.services{
+  margin-top: 150vh;
+  @include fullscreen;
+  @include flex-center;
+  &_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 95%;
+    color: $text-color;
+  }
+  &_item{
+    @include flex-center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    border-bottom: 1px solid $text-color;
+  }
+  .rotating_box{
+    transform: translateX(250px);
+  }
+  .arrow_img{
+    display: block;
+    transform: rotate(45deg);
+    height: 82px;
+    width: 82px;
+    z-index: 1;
+  }
+}
+/* individual styling for each arrow to start from particular position */
+.arrow1{
+  transform: translate3d(-170px, -10px, 0);
+}
+.arrow2{
+  transform: translate3d(-500px, -10px, 0);
+}
+.arrow3{
+  transform: translate3d(-690px, -10px, 0);
+}
+.arrow4{
+  transform: translate3d(-620px, -10px, 0);
+}

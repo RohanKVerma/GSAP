@@ -1,0 +1,15 @@
+@import 'variable';
+@import 'mixin';
+
+.font-syne {
+      font-weight: $font-weight;
+      font-size: 4rem;
+      font-style: normal;
+      text-transform: uppercase;
+}
+.outline_text{
+      position: relative;
+      color: transparent;
+      -webkit-text-stroke: 1px $white;
+      text-transform: uppercase;
+}

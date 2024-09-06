@@ -1,0 +1,30 @@
+@import 'variable';
+@import 'mixin.scss';
+
+.bottom_text{
+      background-color: $primary-color;
+      color: $secondary-color;
+      width: 100vw;
+      height: 8vh;
+      font-size: 32px;
+      font-weight: 800;
+      position: absolute;
+      top: 93%;
+      @include flex-center;
+      &-wrap{
+        @include flex-center;
+        flex-direction: row;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transform: translateX(-500px);
+        .txt{
+          @include flex-center;
+          flex-direction: row;
+          
+          .star{
+            height: 28px;
+            width: 28px;
+          }
+        }
+      }
+    }

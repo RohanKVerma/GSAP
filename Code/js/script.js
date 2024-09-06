@@ -68,7 +68,7 @@ gsap.to('#text2',{
       y:50,
       duration:3
 })
-gsap.to('#about_rotating_box',{
+gsap.to('.about .rotating_box',{
       scrollTrigger: {
             trigger: '.heading',
             start: 'top 100%',
@@ -86,7 +86,7 @@ gsap.to('.about_img',{
       },
       y:0
 })
-gsap.to('#benefits_rotating_box',{
+gsap.to('.benefits .rotating_box',{
       scrollTrigger: {
             trigger: '.benefits_grid',
             start: 'top 110%',
@@ -95,7 +95,7 @@ gsap.to('#benefits_rotating_box',{
       },
       rotate:720
 })
-gsap.to('.benefit_head',{
+gsap.to('.benefits_head',{
       scrollTrigger: {
             trigger:'.benefits_grid',
             start: 'top 90%',
@@ -140,7 +140,7 @@ gsap.from('.portfolio_item:nth-child(2n)',{
       },
       y:70
 })
-gsap.to('#portfolio_rotating_box',{
+gsap.to('.portfolio .rotating_box',{
       scrollTrigger: {
             trigger: '.portfolio',
             start: 'top 100%',
@@ -149,7 +149,7 @@ gsap.to('#portfolio_rotating_box',{
       },
       rotate:720
 })
-gsap.to('#services_rotating_box',{
+gsap.to('.services .rotating_box',{
       scrollTrigger: {
             trigger: '.services',
             start: 'top bottom',

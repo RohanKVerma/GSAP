@@ -1,0 +1,50 @@
+@import 'variable';
+@import 'mixin';
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      line-height: $line-height;
+    }
+    
+    body {
+      background-color: $black;
+      color: $secondary-color;
+      font-family: $font-family;
+      font-weight: $font-weight;
+      overflow-x: hidden;
+    }
+@media(min-width:980px){
+      .overlay_effect{
+            mix-blend-mode:exclusion;
+      }
+}
+.heading{
+      font-size: 3rem;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+}
+.rotating_box{
+      position: absolute;
+      z-index: 1;
+      height: 100px;
+      width: 100px;
+      background: transparent;
+      border: 1px solid $white;
+}
+.outline_text{
+      position: relative;
+      color: transparent;
+      -webkit-text-stroke: 1px $white;
+      text-transform: uppercase;
+}
+.char{
+        transform: translateY(115px);
+        opacity: 0;
+      }

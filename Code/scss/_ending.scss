@@ -1,0 +1,50 @@
+@import 'variable';
+@import 'mixin';
+
+.ending{
+  @include fullscreen;
+  padding: 0%;
+  display: grid;
+  place-content: center;
+  letter-spacing: 35px;
+  h2{
+    margin: 0;
+  }
+  .char{
+    opacity: 0;
+  }
+}
+/* Style for each character */
+.char0{
+  transform: translateY(-50px);
+}
+.char1{
+  transform: translateY(50px);
+}
+.char2{
+  transform: translateY(20px);
+}
+.char3{
+  transform: translateY(-80px);
+}
+.char4{
+  transform: translateY(20px);
+}
+.char5{
+  transform: translateY(-70px);
+}
+.char6{
+  transform: translateY(20px);
+}
+.char7{
+  transform: translateY(-80px);
+}
+.char8{
+  transform: translateY(-90px);
+}
+.char9{
+  transform: translateY(100px);
+}
+.char10{
+  transform: translateY(-50px);
+}

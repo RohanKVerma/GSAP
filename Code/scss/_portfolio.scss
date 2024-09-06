@@ -1,0 +1,38 @@
+@import 'variable';
+@import 'mixin';
+
+.portfolio{
+  padding-top: 800px;
+  @include fullscreen;
+  @include flex-center;
+  
+  &_grid{
+    margin-top: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:110px;
+  }
+  &_head{
+    z-index: 1;
+    position: absolute;
+    font-size: 4em;
+    transform: translate(-130px, -150px);
+  }
+  &_item{
+    height: 100vh;
+    width: 40vw;
+    overflow: hidden;
+    z-index: -1;
+    @include flex-center;
+    flex-direction: column;;
+     img{
+      scale: 1.3;
+      vertical-align: middle;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+.portfolio .rotating_box{
+  transform: translate(0,-750px);
+}

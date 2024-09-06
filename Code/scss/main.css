@@ -1,42 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
-/* Global styling */
-html{
-  scroll-behavior:smooth;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-}
-*{
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+}
+
+body {
   background-color: black;
-  color: white;
-  overflow-x: hidden;
+  color: #9E9E9E;
   font-family: "Syne", sans-serif;
-  font-feature-settings: 'pnum' on, 'lnum' on;
   font-weight: 800;
+  overflow-x: hidden;
 }
-.syne{
-  font-weight: 800;
-  font-optical-sizing: auto;
-  font-size: 4rem;
-  font-style: normal;
-  text-transform: uppercase;
-}
-@media(width>980px){
-  .overlay_effect{
-    mix-blend-mode:exclusion;
+
+@media (min-width: 980px) {
+  .overlay_effect {
+    mix-blend-mode: exclusion;
   }
 }
-.heading{
+.heading {
   font-size: 3rem;
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
 }
-.rotating_box{
+
+.rotating_box {
   position: absolute;
   z-index: 1;
   height: 100px;
@@ -44,45 +38,65 @@ body{
   background: transparent;
   border: 1px solid white;
 }
-.outline_text{
+
+.outline_text {
   position: relative;
   color: transparent;
   -webkit-text-stroke: 1px white;
   text-transform: uppercase;
 }
-.char{
+
+.char {
   transform: translateY(115px);
   opacity: 0;
 }
-.intro{
+
+.font-syne {
+  font-weight: 800;
+  font-size: 4rem;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.outline_text {
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  text-transform: uppercase;
+}
+
+.intro {
   width: 100vw;
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   overflow: hidden;
 }
-.intro_title{
+.intro_title {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: absolute;
 }
-.intro_img{
+.intro_img {
   height: 100%;
   width: 100vw;
-  object-fit: cover;
-  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -1;
 }
-.intro_img img{
+.intro_img img {
   height: 100%;
   width: 43vw;
   transform: translateX(600px);
 }
-.bottom_text{
+
+.bottom_text {
   background-color: #171717;
   color: #9E9E9E;
   width: 100vw;
@@ -94,59 +108,67 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.bottom_text-wrap{
+.bottom_text-wrap {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  flex-direction: row;
   text-transform: uppercase;
   white-space: nowrap;
   transform: translateX(-500px);
 }
-.txt{
+.bottom_text-wrap .txt {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  flex-direction: row;
 }
-.star{
+.bottom_text-wrap .txt .star {
   height: 28px;
   width: 28px;
 }
 
-.about{
-  height: 100vh;
+.about {
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   margin-top: 30vh;
 }
-.about_img{
-height: 100%;
-width: 50vw;
-overflow: hidden;
-transform: translateY(350px);
+.about_img {
+  height: 100%;
+  width: 50vw;
+  overflow: hidden;
+  transform: translateY(350px);
 }
-.about_img img{
+.about_img img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.about_text{
+
+.about_text {
   transform: translate(100px, 150px);
   width: 500px;
 }
-#about_rotating_box{
+
+.about .rotating_box {
   transform: translate(300px, -100px);
 }
-.about_body{
+
+.about_body {
   font-weight: 800;
   color: #4B4B4B;
 }
-/* styling for benefits section*/
-.benefits{
-  height: 100vh;
+
+.benefits {
   width: 100vw;
+  height: 100vh;
   margin-top: 30vh;
   margin-bottom: 30vh;
   display: flex;
@@ -154,159 +176,178 @@ transform: translateY(350px);
   align-items: center;
   flex-direction: column;
 }
-#benefits_rotating_box{
-  transform: translate(50px, -300px);
-}
-.benefits_grid{
+.benefits_grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-left: 40px;
   margin-right: 40px;
 }
-.benefit_head{
+.benefits_head {
   font-size: 4em;
   transform: translateX(100px);
 }
-.benefit_body{
+.benefits_body {
   color: #4B4B4B;
 }
-/* styling for portfolio section*/
-.portfolio{
+.benefits .rotating_box {
+  transform: translate(50px, -300px);
+}
+
+.portfolio {
   padding-top: 800px;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-#portfolio_rotating_box{
-  transform: translate(0,-750px);
-}
-.portfolio_grid{
+.portfolio_grid {
   margin-top: 20vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap:110px;
+  gap: 110px;
 }
-.portfolio_head{
+.portfolio_head {
   z-index: 1;
   position: absolute;
   font-size: 4em;
   transform: translate(-130px, -150px);
 }
-.portfolio_item{
+.portfolio_item {
   height: 100vh;
   width: 40vw;
   overflow: hidden;
   z-index: -1;
   display: flex;
-  flex-direction: column;;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
+  flex-direction: column;
+  flex-direction: column;
 }
-.portfolio_item img{
+.portfolio_item img {
   scale: 1.3;
   vertical-align: middle;
   height: 100%;
   width: 100%;
 }
-/* styling for services section */
-.services{
+
+.portfolio .rotating_box {
+  transform: translate(0, -750px);
+}
+
+.services {
   margin-top: 150vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-#services_rotating_box{
-  transform: translateX(250px);
-}
-.services_list{
+.services_list {
   display: flex;
   flex-direction: column;
   justify-content: left;
   width: 95%;
   color: #4B4B4B;
-
 }
-.services_item{
+.services_item {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  font-size: 50px;
+  font-size: 2rem;
   padding-bottom: 10px;
   padding-top: 25px;
   border-bottom: 1px solid #4B4B4B;
 }
-.arrow_img{
+.services .rotating_box {
+  transform: translateX(250px);
+}
+.services .arrow_img {
   display: block;
   transform: rotate(45deg);
   height: 82px;
   width: 82px;
   z-index: 1;
 }
+
 /* individual styling for each arrow to start from particular position */
-#arrow1{
-  transform: translate3d(-380px, -10px, 0);
+.arrow1 {
+  transform: translate3d(-170px, -10px, 0);
 }
-#arrow2{
-  transform: translate3d(-520px, -10px, 0);
+
+.arrow2 {
+  transform: translate3d(-500px, -10px, 0);
 }
-#arrow3{
-  transform: translate3d(-550px, -10px, 0);
+
+.arrow3 {
+  transform: translate3d(-690px, -10px, 0);
 }
-#arrow4{
-  transform: translate3d(-470px, -10px, 0);
+
+.arrow4 {
+  transform: translate3d(-620px, -10px, 0);
 }
-/* styling for ending section */
-.ending{
-  height: 100vh;
+
+.ending {
   width: 100vw;
+  height: 100vh;
   padding: 0%;
   display: grid;
   place-content: center;
   letter-spacing: 35px;
 }
-.ending h1{
+.ending h2 {
   margin: 0;
 }
-.ending .char{
+.ending .char {
   opacity: 0;
 }
+
 /* Style for each character */
-.char0{
+.char0 {
   transform: translateY(-50px);
 }
-.char1{
+
+.char1 {
   transform: translateY(50px);
 }
-.char2{
+
+.char2 {
   transform: translateY(20px);
 }
-.char3{
+
+.char3 {
   transform: translateY(-80px);
 }
-.char4{
+
+.char4 {
   transform: translateY(20px);
 }
-.char5{
+
+.char5 {
   transform: translateY(-70px);
 }
-.char6{
+
+.char6 {
   transform: translateY(20px);
 }
-.char7{
+
+.char7 {
   transform: translateY(-80px);
 }
-.char8{
+
+.char8 {
   transform: translateY(-90px);
 }
-.char9{
+
+.char9 {
   transform: translateY(100px);
 }
-.char10{
+
+.char10 {
   transform: translateY(-50px);
-}
+}/*# sourceMappingURL=main.css.map */

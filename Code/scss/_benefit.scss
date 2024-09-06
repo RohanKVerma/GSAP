@@ -1,0 +1,26 @@
+@import 'variable';
+@import 'mixin';
+
+.benefits{
+  @include fullscreen;
+  margin-top: 30vh;
+  margin-bottom: 30vh;
+  @include flex-center;
+  
+  &_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  &_head{
+    font-size: 4em;
+    transform: translateX(100px);
+  }
+  &_body{
+    color: $text-color;
+  }
+  .rotating_box{
+    transform: translate(50px, -300px);
+  }
+}
